@@ -12,12 +12,29 @@
 </head>
 <body>
 <main>
-    <div>
-      <img src="images/lewagon.svg" alt="LeWagon"  />
-      <img src="images/webistry.svg" alt="Webistry" />
-      <button class="lvl-btn">Level Up</button>
-      <div class="form">form</div>
-    </div>
+    <div class="container">
+      <div class="logos">
+        <img src="images/webistry.svg" alt="Webistry"/>
+        <img src="images/lewagon.svg" alt="LeWagon"/>
+      </div>
+      <div class="title"><span class="red-text">Level up</span> your coding skills<br> with Webistry.</div>
+      <div class="form-container">
+        <h2 class="form-title">Let's get started by knowing more about you.</h2>
+        <form>
+            <label for="name" class="form-text">Name</label><br>
+            <input type="text" id="name" name="name" placeholder="   Enter your name" required>
+
+            <label for="email" class="form-text">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="   Enter your email" required>
+
+            <label for="language" class="form-text">What's your favorite coding language?</label><br>
+            <input id="language" name="language" placeholder="   JavaScript" required></input>
+
+            <div class="form-checkbox"><input type="checkbox"> The information provided above is accurate</div>
+
+            <button class="lvl-btn" type="submit">Level Up</button>
+        </form>
+      </div>
 </main>
 <script src="main.js"></script>
 </body>
