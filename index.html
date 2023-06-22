@@ -25,12 +25,21 @@
             <input type="text" id="name" name="name" placeholder="   Enter your name" required>
 
             <label for="email" class="form-text">Email</label><br>
-            <input type="email" id="email" name="email" placeholder="   Enter your email" required>
+            <input type="email" id="emailValidation" name="email" placeholder="   Enter your email" required>
 
             <label for="language" class="form-text">What's your favorite coding language?</label><br>
-            <input id="language" name="language" placeholder="   JavaScript" required></input>
+            <select name="language" id="language" required>
+              <option value="javascript">JavaScript</option>
+              <option value="ruby">Ruby</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <option value="csharp">C#</option>
+            </select>
 
-            <div class="form-checkbox"><input type="checkbox"> The information provided above is accurate</div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="myCheckbox">
+              <label for="myCheckbox">The information provided above is accurate</label>
+            </div>
 
             <button class="lvl-btn" type="submit">Level Up</button>
         </form>
