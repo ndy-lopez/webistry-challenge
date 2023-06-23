@@ -17,31 +17,36 @@
         <img src="images/webistry.svg" alt="Webistry"/>
         <img src="images/lewagon.svg" alt="LeWagon"/>
       </div>
-      <div class="title"><span class="red-text">Level up</span> your coding skills<br> with Webistry.</div>
+      <div class="title"><span class="red-text">Level up</span> your coding<br> skills with Webistry.</div>
       <div class="form-container">
         <h2 class="form-title">Let's get started by knowing more about you.</h2>
-        <form>
-            <label for="name" class="form-text">Name</label><br>
-            <input type="text" id="name" name="name" placeholder="   Enter your name" required>
+        <form id="form">
+          <label for="name" class="form-text">Name</label><br>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <label for="email" class="form-text">Email</label><br>
-            <input type="email" id="emailValidation" name="email" placeholder="   Enter your email" required>
+          <label for="email" class="form-text">Email</label><br>
+          <input type="email" id="emailValidation" name="email" placeholder="Enter your email" required>
+          <div id="emailValidationMessage" class="display-none"><p>Email is required.</p></div>
 
-            <label for="language" class="form-text">What's your favorite coding language?</label><br>
-            <select name="language" id="language" required>
-              <option value="javascript">JavaScript</option>
-              <option value="ruby">Ruby</option>
-              <option value="python">Python</option>
-              <option value="java">Java</option>
-              <option value="csharp">C#</option>
-            </select>
 
-            <div class="form-checkbox">
-              <input type="checkbox" id="myCheckbox">
-              <label for="myCheckbox">The information provided above is accurate</label>
-            </div>
+          <label for="language" class="form-text">What's your favorite coding language?</label><br>
+          <select name="language" id="language" required>
+            <option value="javascript">JavaScript</option>
+            <option value="ruby">Ruby</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="csharp">C#</option>
+          </select>
 
-            <button class="lvl-btn" type="submit">Level Up</button>
+          <div class="form-checkbox">
+            <input type="checkbox" id="myCheckbox">
+            <label for="myCheckbox">The information provided above is accurate</label>
+          </div>
+          <div class="display-none">
+            <p>Please check your details.</p>
+          </div>
+
+          <button class="lvl-btn" type="submit">Level Up</button>
         </form>
       </div>
 </main>
