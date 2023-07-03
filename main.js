@@ -3,22 +3,25 @@ const validEmail = (email) => {
   return regex.test(email);
 };
 
-const checked = (checkbox) => {
-  return checkbox.checked;
-};
-
 const form = document.querySelector('#form');
+const formContainer = document.querySelector('.form-container');
+
 const emailInput = document.querySelector('#emailValidation');
-const emailValidationMessage = document.querySelector('#emailValidationMessage');
+const checkbox = document.querySelector('#myCheckbox');
+
+const successMessage = document.querySelector('#success-msg');
+const checkDetails = document.querySelector('#check-details');
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const emailValue = emailInput.value;
 
-  if (validEmail === false) {
-    emailValidationMessage.classList.remove("display-none");
+  if (validEmail(emailValue) && checkbox.checked) {
+    formContainer.classList.add("display-none");
+    successMessage.classList.remove("display-none");
   } else {
-    emailValidationMessage.classList.add("display-none");
-    // Perform other validation or submission logic
+    formContainer.classList.remove("display-none");
+    successMessage.classList.add("display-none");
+    checkDetails.classList.remove("display-none");
   }
 });
